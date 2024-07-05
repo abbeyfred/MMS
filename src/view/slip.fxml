@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+
+<VBox fx:controller="controller.MMSlipController" xmlns:fx="http://javafx.com/fxml/1"
+          styleClass="background" prefHeight="350.0" prefWidth="600.0" alignment="CENTER" spacing="10">
+    
+    <padding>
+        <Insets top="10" bottom="10" left="15" right="15" />
+    </padding>
+    
+    <GridPane>
+        <padding>
+            <Insets bottom="40"/>
+        </padding>
+        
+        <Text styleClass="label-h2" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="2" text="Membership Slip:"/>
+    
+        <Text   GridPane.rowIndex="1" GridPane.columnIndex="0" text="Total Credits:"/>
+        <Label  GridPane.rowIndex="1" GridPane.columnIndex="1" fx:id="totalCreditsLbl"/>
+
+        <Text   GridPane.rowIndex="2" GridPane.columnIndex="0" text="Total Expense:"/>
+        <Label  GridPane.rowIndex="2" GridPane.columnIndex="1" fx:id="totalExpenseLbl"/>
+
+        <Text   GridPane.rowIndex="3" GridPane.columnIndex="0" text="Gasdeduction Rate:"/>
+        <Label  GridPane.rowIndex="3" GridPane.columnIndex="1" fx:id="gasDeductionRateLbl"/>
+
+        <Text   GridPane.rowIndex="1" GridPane.columnIndex="2" text="Pay Per Credit:"/>
+        <Label  GridPane.rowIndex="1" GridPane.columnIndex="3" fx:id="payPerCreditLbl"/>
+
+        <Text   GridPane.rowIndex="2" GridPane.columnIndex="2" text="Dollar Available:"/>
+        <Label  GridPane.rowIndex="2" GridPane.columnIndex="3" fx:id="dollarAvailableLbl"/>
+
+        <Text   GridPane.rowIndex="3" GridPane.columnIndex="2" text="Deduction Rate:"/>
+        <Label  GridPane.rowIndex="3" GridPane.columnIndex="3" fx:id="deductionRateLbl"/>
+        
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="40.0" percentWidth="40.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" percentWidth="30.0" prefWidth="30.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="40.0" percentWidth="40.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" percentWidth="30.0" prefWidth="30.0" />
+        </columnConstraints>
+    </GridPane>
+    
+    <Button alignment="CENTER" text="Close" onAction="#handleClose"/>
+    
+    <stylesheets>
+        <URL value="@mmsfx.css"/>
+    </stylesheets>
+    
+</VBox>
